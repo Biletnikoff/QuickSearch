@@ -1,0 +1,142 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,300,700);
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box; }
+
+body {
+  background-color: white;
+  font-family: 'Nunito', sans-serif;
+  margin:0px;
+ }
+
+.container {
+  padding: 20px;
+  padding-top: 100px;
+  text-align: center; }
+  .container .product {
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 240px;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #797979;
+    margin: 20px;
+    padding: 15px; }
+    .container .product img {
+      position: relative;
+      width: 200px;
+      height: 100px;
+      top: -15px;
+      left: -15px;
+      transition: all .2s ease;
+      clip-path: polygon(0 100%, 0 0, 100% 0, 100% 70%);
+      border-top-right-radius: 4px;
+      border-top-left-radius: 4px; }
+      .container .product img:hover {
+        clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+        transform: scale(1.1); }
+    .container .product h2 {
+      text-align: left;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: -16px;
+      margin-bottom: 4px; }
+    .container .product .description {
+      text-align: left;
+      font-size: 11px;
+      color: #fff;
+      max-height: 23px;
+      overflow: hidden; }
+    .container .product .price {
+      text-align: right;
+      font-size: 18px;
+      color: #fff;
+      margin-top: 6px;
+      float: right;
+      position: absolute;
+      bottom: 33px;
+      right: 10px; }
+    .container .product .btn {
+      position: absolute;
+      font-size: 11px;
+      font-weight: bold;
+      float: right;
+      padding: 10px;
+      border: 2px solid #00fefe;
+      border-radius: 20px;
+      bottom: 10px;
+      right: 10px;
+      color: #00fefe;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all .2s ease; }
+      .container .product .btn.ok {
+        background-color: rgba(0, 254, 254, 0.4);
+        color: #fff; }
+        .container .product .btn.ok:after {
+          content: "\e080";
+          color: #fff; }
+      .container .product .btn:hover {
+        padding-right: 25px; }
+        .container .product .btn:hover:after {
+          margin-left: 5px; }
+      .container .product .btn:after {
+        font-family: 'simple-line-icons';
+        content: "\e095";
+        transition: all .2s ease;
+        position: absolute;
+        color: #00fefe;
+        margin-left: 30px;
+        transition: all .2s ease; }
+    .container .product .quickview {
+      position: absolute;
+      bottom: 20px;
+      font-size: 11px;
+      color: #fff;
+      cursor: pointer; }
+      .container .product .quickview:before {
+        font-family: 'simple-line-icons';
+        content: "\e05d";
+        margin-right: 3px; }
+
+.quickviewContainer {
+  position: fixed;
+  height: 100vh;
+  width: 400px;
+  background: rgba(0, 0, 0, 0.9);
+  top: 70px;
+  right: -100%;
+  transition: all .3s ease;
+  padding: 30px;
+  color: #fff; }
+  .quickviewContainer .close {
+    height: 20px;
+    width: 20px;
+    float: right;
+    cursor: pointer; }
+    .quickviewContainer .close:before, .quickviewContainer .close:after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background-color: #ffF;
+      transform: rotate(45deg); }
+    .quickviewContainer .close:after {
+      transform: rotate(-45deg); }
+  .quickviewContainer .headline {
+    margin-bottom: 30px;
+    font-size: 18px; }
+  .quickviewContainer .description {
+    font-size: 12px;
+    margin-bottom: 20px; }
+  .quickviewContainer img {
+    display: inline-block;
+    border-radius: 4px;
+    margin: 5px; }
+  .quickviewContainer.active {
+    right: 0; }
+
+/*# sourceMappingURL=styles.css.map */
